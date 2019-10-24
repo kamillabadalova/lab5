@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<books>
+    <book>
+     <authorname>Pushkin A.S.</authorname>
+        <kniga>Ruslan i Ludmila</kniga>
+        <pages>150</pages>
+   </book>
+   <authorname>Pushkin A.S.</authorname>
+        <kniga>Skazka o ribake i ribke</kniga>
+            <pages>25</pages>
+    <book>
+     <authorname>Tolstoy L.N.</authorname>
+        <kniga>Voyna i mir</kniga>
+        <pages>1000</pages>
+    </book>
+</books>
