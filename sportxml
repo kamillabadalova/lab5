@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <team> 
-    <sportsman name="vasya" birthday="1987-12-13" gender="man">
+    <sportsman name="vasya" birthday="1987.12.13" gender="man">
         <event place="kazan" year="2003">
             <result>200</result>
             <award>gold</award>
@@ -10,13 +10,13 @@
             <award>silver</award>
         </event>
     </sportsman>
-    <sportsman name="kolya" birthday="1985-01-13" gender="man">
+    <sportsman name="kolya" birthday="1985.01.13" gender="man">
         <event place="kazan" year="2003">
             <result>160</result>
             <award>bronze</award>
         </event>
     </sportsman>
-    <sportsman name="shura" birthday="1982-02-13" gender="woman">
+    <sportsman name="shura" birthday="1982.02.13" gender="woman">
         <event place="kiev" year="2001">
             <result>200</result>
             <award>gold</award>
@@ -26,7 +26,7 @@
             <award>gold</award>
         </event>
     </sportsman>
-    <sportsman name="katya" birthday="2000-01-12" gender="woman">
+    <sportsman name="katya" birthday="2000.01.12" gender="woman">
         <event place="nijnekamsk" year="2010">
             <result>160</result>
             <award>bronze</award>
@@ -36,7 +36,7 @@
             <award>gold</award>
         </event>
     </sportsman>
-    <sportsman name="petya" birthday="2001-01-12" gender="woman">
+    <sportsman name="petya" birthday="2001.01.12" gender="woman">
         <event place="bugulma" year="2015">
             <result>200</result>
             <award>gold</award>
