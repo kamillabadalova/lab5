@@ -14,7 +14,7 @@ public class SaxExample {
         SAXParser parser = factory.newSAXParser();
 
        
-        MyHandler handler = new  MyHandler();
+        MyXmlHandler handler = new  MyXmlHandler();
         parser.parse(fname,  handler);
     }
 }
