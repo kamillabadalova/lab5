@@ -1,0 +1,46 @@
+
+import javax.xml.namespace.QName;
+import javax.xml.stream.XMLEventReader;
+import javax.xml.stream.XMLInputFactory;
+import javax.xml.stream.XMLStreamException;
+import javax.xml.stream.events.Attribute;
+import javax.xml.stream.events.StartElement;
+import javax.xml.stream.events.XMLEvent;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.util.ArrayList;
+
+public class MainContactsXmlStAX {
+	static String fname = "xml"; 
+  public static void main(String[] args) {
+      ArrayList <Books> knigi = new ArrayList<>();
+      XMLInputFactory factory = XMLInputFactory.newInstance();
+      Books pers = new Books();
+      try {
+          XMLEventReader reader = factory.createXMLEventReader(new FileInputStream(fname));
+          while (reader.hasNext()) {
+              XMLEvent xmlEvent = reader.nextEvent();
+              if (xmlEvent.isStartElement()) {
+                  StartElement startElement = xmlEvent.asStartElement();
+                  if (startElement.getName().getLocalPart().equals("author")) {
+                      Attribute persAttr = startElement.getAttributeByName(new QName("name"));
+                      if (persAttr != null) {
+                          pers.setName(persAttr.getValue());
+                      }
+                  } else if (startElement.getName().getLocalPart().equals("book")) {
+                      Attribute persAttr = startElement.getAttributeByName(new QName("kniga"));
+                      if (persAttr != null) {
+                          pers.setkniga(persAttr.getValue());
+                      }
+                  } else if (startElement.getName().getLocalPart().equals("pages")) {
+                      xmlEvent = reader.nextEvent();
+                      pers.setPages(Integer.parseInt(xmlEvent.asCharacters().getData()));
+                      knigi.add(pers);
+                      pers = new Books(pers.getName(), null, 0);}}}
+      } catch (XMLStreamException | FileNotFoundException e) {
+          e.printStackTrace();
+      }
+for(Books c :knigi)
+  System.out.println(c);
+  }
+}
