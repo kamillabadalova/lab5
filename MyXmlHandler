@@ -2,9 +2,9 @@ import java.util.ArrayList;
 import org.xml.sax.Attributes;
 import org.xml.sax.helpers.DefaultHandler;
 
-public class SaxHandler extends DefaultHandler  {
+public class MyXmlHandler extends DefaultHandler  {
 	
-	public ArrayList <Sportsman> getPeople(){
+     public ArrayList <Sportsman> getPeople(){
 	       return getPeople(); }
 
     private String lastElementName;
